@@ -1,9 +1,9 @@
-package gossdb
+package goredis
 
 import (
 	"errors"
 	"github.com/jolestar/go-commons-pool"
-	"github.com/stitchcula/gossdb/conf"
+	"github.com/stitchcula/goredis/conf"
 )
 
 //连接池
@@ -32,7 +32,6 @@ func (c *Connectors) Init(cfg *conf.Config) {
 		MakeNew: func() (*SSDBClient, error) {
 			return &SSDBClient{
 				Host:     cfg.Host,
-				Port:     cfg.Port,
 				Password: cfg.Password,
 				ReadBufferSize:  cfg.ReadBufferSize,
 				WriteBufferSize: cfg.WriteBufferSize,

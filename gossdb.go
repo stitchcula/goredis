@@ -1,6 +1,6 @@
-package gossdb
+package goredis
 
-import "github.com/stitchcula/gossdb/conf"
+import "github.com/stitchcula/goredis/conf"
 
 var (
 	//是否启动编码，启用后会对struct 等复杂结构 进行 json 编码，以支持更多类型

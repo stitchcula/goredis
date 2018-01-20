@@ -1,4 +1,4 @@
-package gossdb
+package goredis
 
 import (
 	"bytes"
@@ -19,7 +19,6 @@ type SSDBClient struct {
 	isOpen    bool
 	Password  string
 	Host      string
-	Port      int
 	sock      *net.TCPConn
 	readBuf  []byte
 	//连接写缓冲，默认为8k，单位为kb
@@ -38,7 +37,7 @@ type SSDBClient struct {
 
 //打开连接
 func (s *SSDBClient) Start() error {
-	conn, err := net.DialTimeout("tcp", fmt.Sprintf("%s:%d", s.Host, s.Port), time.Second)
+	conn, err := net.DialTimeout("tcp",  s.Host, time.Second)
 	if err != nil {
 		return err
 	}

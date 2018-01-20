@@ -2,10 +2,8 @@ package conf
 
 //ssdb连接池的配置
 type Config struct {
-	//ssdb的ip或主机名
+	//地址
 	Host string
-	// ssdb的端口
-	Port int
 	//获取连接超时时间，单位为秒。默认值: 5
 	GetClientTimeout int
 	//连接读写超时时间，单位为秒。默认值: 60

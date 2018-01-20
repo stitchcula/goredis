@@ -1,4 +1,4 @@
-package gossdb
+package goredis
 
 import (
 	"encoding/json"

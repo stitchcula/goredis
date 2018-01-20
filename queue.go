@@ -1,4 +1,4 @@
-package gossdb
+package goredis
 
 import (
 	"github.com/seefan/goerr"

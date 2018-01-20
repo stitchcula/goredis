@@ -33,4 +33,4 @@
 //	} else {
 //		log.Println(re, "is get")
 //	}
-package gossdb
+package goredis
